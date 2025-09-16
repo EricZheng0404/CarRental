@@ -12,6 +12,11 @@ const Navbar = () => {
 
     const navigate = useNavigate()
 
+    // Function to handle dashboard navigation
+    const handleDashboardClick = () => {
+        navigate('/owner')
+    }
+
     // index comes with the map function
     let menuItem = menuLinks.map((link, index) => ( 
         // If use () or not with any brackets, there's no need to add return keyword
@@ -44,7 +49,7 @@ const Navbar = () => {
             </div>
 
             <div className="flex max-sm:flex-col items-start sm:items-center gap-6">
-                <button className='cursor-pointer' onClick={() => navigate('/owner')}>Dashboard</button>
+                <button className='cursor-pointer' onClick={handleDashboardClick}>Dashboard</button>
                 <button className='cursor-pointer px-8 py-2 bg-primary
                 hover:bg-primary-dull transition-all text-white rounded-lg'>Login</button>
             </div>

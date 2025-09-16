@@ -1,12 +1,19 @@
-# React + Vite
+# Full Stack Car Rental Booking App (MERN Stack)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
+- **User Authentication:** Secure sign-up and login with JWT tokens.
+- **Car Listings:** Browse available cars with filtering by location and date.
+- **Booking System:** Complete booking workflow for users to reserve cars.
+- **Owner/Admin Dashboard:** Manage cars and bookings with status updates.
+- **Image Management:** Image uploading and optimization via ImageKit.
+- **Responsive UI:** Clean and animated user interface built with React and Tailwind CSS.
+- **Deployment:** Easily deployed on Vercel for online access.
 
-Currently, two official plugins are available:
+## Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend:** React.js, React Router DOM, Tailwind CSS
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB
+- **Authentication:** JWT (JSON Web Tokens)
+- **Image Storage:** ImageKit
+- **Deployment:** Vercel
