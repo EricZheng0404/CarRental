@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { assets, menuLinks } from '../assets/assets'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = ({setShowLogin}) => {
     // Use to determine the current path/location, so that the navigation bar 
     // could change to different color
     const location = useLocation()
@@ -14,7 +14,12 @@ const Navbar = () => {
 
     // Function to handle dashboard navigation
     const handleDashboardClick = () => {
-        navigate('/owner')
+        setShowLogin(true);
+    }
+
+    // Function to handle login navigation
+    const handleLoginClick = () => {
+        navigate('/login')
     }
 
     // index comes with the map function
@@ -50,12 +55,15 @@ const Navbar = () => {
 
             <div className="flex max-sm:flex-col items-start sm:items-center gap-6">
                 <button className='cursor-pointer' onClick={handleDashboardClick}>Dashboard</button>
-                <button className='cursor-pointer px-8 py-2 bg-primary
+                <button onClick={handleLoginClick} className='cursor-pointer px-8 py-2 bg-primary
                 hover:bg-primary-dull transition-all text-white rounded-lg'>Login</button>
             </div>
         </div>
-        
 
+        {/* The button is only visible on small screen */}
+        <button className="sm:hidden cursor-pointer" aria-label="Menu" onClick={()=>setOpen(!open)}>
+            <img src={open ? assets.close_icon : assets.menu_icon} alt="menu" />
+        </button>
     </div>
   )
 }

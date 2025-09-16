@@ -1,4 +1,10 @@
 {
+  "scripts": {
+    "dev": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "lint": "cd client && npm run lint",
+    "preview": "cd client && npm run preview"
+  },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.13",
     "tailwindcss": "^4.1.13"
